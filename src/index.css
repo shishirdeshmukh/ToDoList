@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+/* Add Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 * {
   margin: 0;
@@ -7,88 +9,82 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 
-
 .main_div {
   width: 100%;
   min-height: 100vh;
-  background: #BA5370;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #F4E2D8, #BA5370);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #F4E2D8, #BA5370); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: linear-gradient(to right, #F4E2D8, #BA5370);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
 }
 
-.center_div{
-  width: 25%;
-  height: 80vh;
+.center_div {
+  width: 80%; /* Adjusted width */
+  max-width: 500px; /* Added max-width */
+  height: auto;
   background-color: #fff;
-  box-shadow:  5px 5px 25px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+  
+  
 }
 
-h1{
+@media (max-width: 768px) {
+  .center_div {
+    width: 80%;
+  }
+}
+
+h1 {
   color: white;
-  background: transparent;
-  background: #C02425;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F0CB35, #C02425);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #F0CB35, #C02425); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: linear-gradient(to right, #F0CB35, #C02425);
   padding: 6px 0 2px 0;
   margin-bottom: 10px;
-  box-shadow:  5px 5px 15px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.2);
+  font: 'Nunito Sans', sans-serif;
 }
 
 input {
- text-align: center;
- height: 30px;
- top: 10px;
- border: none;
- background: transparent;
- font-size: 25px;
- font-weight: 600;
- width: 60%;
- border-bottom: 2px;
- color: #232526;  /* fallback for old browsers */
-color: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-color: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
- outline: none;
+  text-align: center;
+  height: 40px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  font-weight: 600;
+  width: 60%;
+  border-bottom: 2px;
+  color: linear-gradient(to right, #414345, #232526);
+  outline: none;
 }
 
-button{
+button {
   min-height: 40px;
-  width: 40px;
+  width: 49px;
   border-radius: 50%;
   border-color: transparent;
-  background: #C02425;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F0CB35, #C02425);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #F0CB35, #C02425); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #F0CB35, #C02425);
   color: white;
   font-size: 40px;
   border: none;
   outline: none;
   margin-left: 10px;
-  box-shadow:  5px 5px 15px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background: #283048;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-
+  background: linear-gradient(to right, #859398, #283048);
 }
 
-ol{
+ol {
   margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
 }
 
-ol li{
+ol li {
   padding-left: 0px;
   text-align: left;
   font-size: 25px;
@@ -96,81 +92,64 @@ ol li{
   min-height: 40px;
   display: flex;
   align-items: center;
-  color: #232526;  /* fallback for old browsers */
-color: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-color: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  color: linear-gradient(to right, #414345, #232526);
   text-transform: capitalize;
 }
 
-button{
-  margin-left: 5px;
-  min-height: 40px;
-  width: 40px;
-  color: white;
-  font-size: 30px;
-}
-
-.todo_style{
+.todo_style {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: left;
+  justify-content: space-between;
 }
 
-.todo_style .fa-times{
+.todo_style .sd {
+  padding-left: 10px;
+}
+
+.todo_style .fa-solid {
+  margin: 0 15px 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo_style .fa-times {
   width: 25px;
   height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #C02425;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F0CB35, #C02425);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #F0CB35, #C02425);
   border-radius: 50%;
-  margin : 0 15px 0 35px;
+  margin: 0 15px 0 35px;
   color: aliceblue;
-  box-shadow:  5px 5px 15px -5px rgba(0, 0, 0, 0.2);
-
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.2);
 }
 
-.todo_style .fa-times:hover{
-  background: #283048;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-}
-.todo_style .fa-times:hover .list_style{
-  background: #283048;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+.todo_style .listItems {
+  padding-left: 10%;
+  flex-grow: 1;
+  text-align: left;
 }
 
-@media (max-width : 768px) {
-  .center-div{
-    width: 55%;
+@media (max-width: 768px) {
+  .todo_style .listItems {
+    padding-left: 5%;
   }
 }
 
-.todo_style .fa-times {
+.todo_style .fa-solid {
   margin: 0 15px 0 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .footer_div {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  
   padding: 20px;
-  color: #283048;  /* fallback for old browsers */
-  color: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
-  color: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: linear-gradient(to right, #859398, #283048);
   font-size: 1.3rem;
   text-align: right;
   font-weight: 600;
@@ -179,15 +158,6 @@ button{
 @media (max-width: 768px) {
   .footer_div {
     text-align: center;
+    font-size: 1rem;
   }
 }
-
-
-/* .footer_div p{
-  color: #283048;
-  font-size: 1.5rem;
-}
-
-.footer_div p{
-  color: #C02425;
-} */

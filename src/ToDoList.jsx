@@ -1,27 +1,25 @@
-import React from "react"
+import React from "react";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
-const ToDoList =(props)=>{
+const ToDoList = (props) => {
+    const { text, completed, id, onDelete, onToggleCompletion } = props;
 
-   
+    return (
+        <div className="todo_style">
+             <div className="sd">
+             <span className="checkbox" onClick={() => onToggleCompletion(id)}>
+                {completed ? <i className="bi bi-check-square-fill"></i> :  <i className="bi bi-check-square"></i>}
+            </span>
+            </div>
+            
+            <li className="listItems" style={{ textDecoration: completed ? "line-through" : "none" }}>{text}</li>
+           
+          
+          
 
-
-
-    return (<>
-    <div className="todo_style"> 
-    <i className=  "fa fa-times" aria-hidden="true"  
-    onClick={() => 
-        props.onSelect(props.id)
-    }
-    
-    />
-
-
-    <li> {props.text} </li>
-
-    </div>
-    </>
-    
-    ) 
-}
+            <i className="fa-solid fa-trash" onClick={() => onDelete(id)} />
+        </div>
+    );
+};
 
 export default ToDoList;
