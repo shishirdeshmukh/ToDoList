@@ -6,6 +6,7 @@ This is a simple to-do list application built using React. It allows users to ad
 
 - Add new tasks
 - Delete tasks
+- Mark task Completed
 
 ## Technologies Used
 
